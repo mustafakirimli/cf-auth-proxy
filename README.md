@@ -5,7 +5,7 @@ CloudFlare Accesss JWT validation example for Kubernetes.
 https://developers.cloudflare.com/access/setting-up-access/validate-jwt-tokens/
 
 
-# testing on Voyager Ingress (ha-proxy)
+# Testing on Voyager Ingress (ha-proxy)
 Please apply same steps and provide **cf-auth-proxy.kube-system** as target/authhost when defining backend and add **namespace:kube-system**
 
 ```yaml
