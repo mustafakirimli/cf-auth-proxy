@@ -6,9 +6,7 @@ https://developers.cloudflare.com/access/setting-up-access/validate-jwt-tokens/
 
 # Installation
 ```bash
-git clone https://github.com/mustafakirimli/cf-auth-proxy.git
-cd cf-auth-proxy
-kubectl apply -f ./k8s/
+kubectl apply -f https://raw.githubusercontent.com/mustafakirimli/cf-auth-proxy/master/k8s/deploy.yaml
 ```
 
 
