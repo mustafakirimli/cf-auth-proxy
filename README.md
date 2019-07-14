@@ -7,6 +7,11 @@ https://developers.cloudflare.com/access/setting-up-access/validate-jwt-tokens/
 # Installation
 Do not forget to change *POLICY_AUD* and *AUTH_DOMAIN* in deployment. 
 ```bash
+CF_POLICY_AUD="ABC"
+CF_AUTH_DOMAIN="mydomain.cloudflareaccess.com"
+
+kubectl create secret generic cf-auth-proxy --from-literal=policy-aud="${CF_POLICY_AUD}" --from-literal=auth-domain="${CF_AUTH_DOMAIN}" --namespace=kube-system
+
 kubectl apply -f https://raw.githubusercontent.com/mustafakirimli/cf-auth-proxy/master/k8s/deploy.yaml
 ```
 
