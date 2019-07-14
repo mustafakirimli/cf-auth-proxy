@@ -35,3 +35,19 @@ spec:
           limits:
             cpu: 500m
             memory: 600M
+--
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    k8s-app: cf-auth-proxy
+  name: cf-auth-proxy
+  namespace: kube-system
+spec:
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    k8s-app: cf-auth-proxy
