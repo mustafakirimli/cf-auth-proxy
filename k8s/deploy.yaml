@@ -56,7 +56,7 @@ apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   namespace: kube-system
-  name: gitlab-runner
+  name: cf-auth-proxy
   labels:
     app: cf-auth-proxy
 spec:
