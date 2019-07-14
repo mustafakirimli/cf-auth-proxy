@@ -40,7 +40,8 @@ spec:
       - path: /cfAuth
         backend:
           name: cf-auth-proxy
-          serviceName: cf-auth-proxy
+          serviceName: cf-auth-proxy.kube-system
+          namespace: kube-system
           servicePort: 80
 
 ```
