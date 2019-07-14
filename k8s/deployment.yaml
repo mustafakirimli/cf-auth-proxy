@@ -22,7 +22,7 @@ spec:
           value: AUDEXAMPLEAUDAUDEXAMPLEAUD
         - name: AUTH_DOMAIN
           value: mydomain.cloudflareaccess.com
-        image: mkirimli/cf-auth-proxy:latest
+        image: mustafakirimli/cf-auth-proxy:latest
         imagePullPolicy: Always
         name: cf-auth-proxy
         ports:
