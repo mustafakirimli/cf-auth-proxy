@@ -19,9 +19,15 @@ spec:
       - 
         env:
         - name: POLICY_AUD
-          value: AUDEXAMPLEAUDAUDEXAMPLEAUD
+          valueFrom:
+          secretKeyRef:
+            name: cf-auth-proxy
+            key: policy-aud
         - name: AUTH_DOMAIN
-          value: mydomain.cloudflareaccess.com
+          valueFrom:
+          secretKeyRef:
+            name: cf-auth-proxy
+            key: auth-domain
         image: mustafakirimli/cf-auth-proxy:latest
         imagePullPolicy: Always
         name: cf-auth-proxy
