@@ -55,7 +55,7 @@ def verify_token(f):
     return wrapper
  
  
-@app.route('/cfAuth/<path:subpath>')                           |                                                                
+@app.route('/cfAuth/<path:subpath>')
 @verify_token
 def hello_world(subpath):
     return 'Request Verified!'
