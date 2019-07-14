@@ -5,13 +5,15 @@ CloudFlare Access JWT validation example for Kubernetes.
 https://developers.cloudflare.com/access/setting-up-access/validate-jwt-tokens/
 
 # Installation
-Do not forget to change *POLICY_AUD* and *AUTH_DOMAIN* in deployment. 
 ```bash
+# parameters
 CF_POLICY_AUD="ABC"
 CF_AUTH_DOMAIN="mydomain.cloudflareaccess.com"
 
+# create secret (cf configs) for deployment
 kubectl create secret generic cf-auth-proxy --from-literal=policy-aud="${CF_POLICY_AUD}" --from-literal=auth-domain="${CF_AUTH_DOMAIN}" --namespace=kube-system
 
+# create deployment, svc and hpa
 kubectl apply -f https://raw.githubusercontent.com/mustafakirimli/cf-auth-proxy/master/k8s/deploy.yaml
 ```
 
