@@ -11,7 +11,7 @@ POLICY_AUD = os.getenv("POLICY_AUD")
  
 # Your CF Access Authentication domain
 AUTH_DOMAIN = os.getenv("AUTH_DOMAIN")
-CERTS_URL = "https:{}/cdn-cgi/access/certs".format(AUTH_DOMAIN)
+CERTS_URL = "https://{}/cdn-cgi/access/certs".format(AUTH_DOMAIN)
  
 def _get_public_keys():
     """
